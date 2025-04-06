@@ -28,3 +28,6 @@ app.get('/getDownloadLink', (req, res) => {
 app.listen(port, () => {
     console.log(`Servidor rodando em http://localhost:${port}`);
 });
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/index.html'); // Certifique-se de ter esse arquivo na raiz do projeto
+});
